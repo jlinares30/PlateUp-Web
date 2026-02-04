@@ -1,11 +1,236 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+// Placeholder data for features
+const features = [
+	{
+		title: "Weekly Planning",
+		description:
+			"Organize your meals for the week in minutes. Say goodbye to 'what's for dinner?'",
+		icon: "📅",
+	},
+	{
+		title: "Delicious Recipes",
+		description: "Access a collection of healthy and easy-to-make recipes.",
+		icon: "🍲",
+	},
+	{
+		title: "Shopping List",
+		description:
+			"Automatically generate your shopping list based on your plan.",
+		icon: "🛒",
+	},
+];
 ---
 
 <Layout>
-	<Welcome />
+	<main>
+		<!-- Hero Section -->
+		<section class="hero">
+			<div class="hero-bg"></div>
+			<div class="container hero-content">
+				<h1 class="text-gradient">
+					Your perfect meal plan, <br /> simplified.
+				</h1>
+				<p class="subtitle">
+					Discover recipes, organize your week, and eat better with
+					PlateUp.
+				</p>
+				<div class="cta-group">
+					<a href="/app-release.apk" class="btn btn-primary" download>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+							></path><polyline points="7 10 12 15 17 10"
+							></polyline><line x1="12" y1="15" x2="12" y2="3"
+							></line></svg
+						>
+						Download APK (Android)
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- App Showcase Section -->
+		<section class="showcase">
+			<div class="container">
+				<div class="phone-mockup">
+					<div class="screen-placeholder">
+						<img src="/preview-app.jpeg" alt="App Preview" />
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Features Section -->
+		<section class="features">
+			<div class="container">
+				<h2 class="section-title">Everything you need</h2>
+				<div class="features-grid">
+					{
+						features.map((feature) => (
+							<div class="feature-card">
+								<div class="icon">{feature.icon}</div>
+								<h3>{feature.title}</h3>
+								<p>{feature.description}</p>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer>
+			<div class="container footer-content">
+				<p>
+					&copy; {new Date().getFullYear()} PlateUp. All rights reserved.
+				</p>
+			</div>
+		</footer>
+	</main>
 </Layout>
+
+<style>
+	/* Hero */
+	.hero {
+		position: relative;
+		min-height: 80vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		padding: 2rem;
+		overflow: hidden;
+	}
+
+	.hero-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		/* Ensure the path is correct relative to public */
+		background-image:
+			linear-gradient(to bottom, rgba(15, 17, 21, 0.7), var(--color-bg)),
+			url("/hero-bg.png");
+		background-size: cover;
+		background-position: center;
+		z-index: -1;
+	}
+
+	.hero-content h1 {
+		font-size: clamp(2.5rem, 5vw, 4.5rem);
+		font-weight: 800;
+		margin-bottom: 1.5rem;
+		letter-spacing: -0.02em;
+	}
+
+	.subtitle {
+		font-size: 1.25rem;
+		color: var(--color-text-muted);
+		max-width: 600px;
+		margin: 0 auto 2.5rem;
+	}
+
+	/* Showcase */
+	.showcase {
+		margin-top: -5rem;
+		padding-bottom: var(--spacing-section);
+		position: relative;
+		z-index: 10;
+	}
+
+	.phone-mockup {
+		width: 300px;
+		height: 600px;
+		background: #000;
+		border-radius: 40px;
+		border: 8px solid #333;
+		margin: 0 auto;
+		position: relative;
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+		overflow: hidden;
+	}
+
+	.screen-placeholder {
+		width: 100%;
+		height: 100%;
+		background: #252525;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--color-text-muted);
+		flex-direction: column;
+		text-align: center;
+		padding: 0;
+	}
+	.screen-placeholder img {
+		width: 100%;
+		height: 120%;
+		overflow: hidden;
+		object-fit: contain;
+	}
+
+	/* Features */
+	.features {
+		padding: var(--spacing-section) 0;
+		background: var(--color-surface);
+	}
+
+	.section-title {
+		text-align: center;
+		font-size: 2.5rem;
+		margin-bottom: 3rem;
+	}
+
+	.features-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+		gap: 2rem;
+	}
+
+	.feature-card {
+		background: rgba(255, 255, 255, 0.03);
+		padding: 2rem;
+		border-radius: 1rem;
+		border: 1px solid rgba(255, 255, 255, 0.05);
+		transition: transform 0.3s ease;
+	}
+
+	.feature-card:hover {
+		transform: translateY(-5px);
+		background: rgba(255, 255, 255, 0.05);
+	}
+
+	.feature-card .icon {
+		font-size: 2.5rem;
+		margin-bottom: 1rem;
+	}
+
+	.feature-card h3 {
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
+		color: var(--color-primary);
+	}
+
+	.feature-card p {
+		color: var(--color-text-muted);
+	}
+
+	/* Footer */
+	footer {
+		padding: 3rem 0;
+		text-align: center;
+		color: var(--color-text-muted);
+		border-top: 1px solid rgba(255, 255, 255, 0.05);
+	}
+</style>
