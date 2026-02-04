@@ -1,34 +1,38 @@
-# Astro Starter Kit: Basics
+# PlateUp - Landing Page
 
-```sh
-npm create astro@latest -- --template basics
-```
+Welcome to the landing page for **PlateUp**, an application designed to simplify your meal planning. This landing page is built with [Astro](https://astro.build) to provide a fast and responsive experience.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## 📱 About PlateUp
+
+PlateUp helps you discover recipes, organize your week, and eat better. It's your perfect meal plan companion.
+
+### Key Features
+
+- **📅 Weekly Planning:** Organize your meals for the week in minutes. No more wondering "what's for dinner?".
+- **🍲 Delicious Recipes:** Access a collection of healthy and easy-to-make recipes.
+- **🛒 Shopping List:** Automatically generate your shopping list based on your plan.
 
 ## 🚀 Project Structure
 
-Inside of your Astro project, you'll see the following folders and files:
+This project uses Astro to generate a static landing page for the application. The structure is as follows:
 
 ```text
 /
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
+│   ├── app-release.apk  # Android Application Package
+│   ├── preview-app.jpeg # App preview image
+│   └── ...
+├── src/
+│   ├── layouts/
+│   │   └── Layout.astro # Main HTML layout
+│   ├── pages/
+│   │   └── index.astro  # Landing page content
+│   └── styles/
+│       └── global.css   # Global styles
 └── package.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
+## 🛠️ Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -38,9 +42,9 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
+## 📥 Download
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+The landing page includes a direct download link for the Android version of the app (`.apk`).
+
+Developed by *Jorge Linares*
