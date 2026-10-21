@@ -1,17 +1,43 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = "PlateUp - Smart Nutrition & Weekly Meal Planner",
+	description = "PlateUp simplifies your nutrition journey: plan your week, discover healthy recipes, auto-generate grocery lists, and track your pantry with zero stress."
+} = Astro.props;
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/adaptive-icon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" href="/adaptive-icon.png" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content="meal planning app, recipes, grocery list generator, pantry tracker, healthy eating, weekly meals, Android APK" />
+		<meta name="author" content="Jorge Linares" />
+		<meta name="theme-color" content="#10b981" />
+		
+		<!-- Open Graph / Social Sharing -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content="/preview-app.jpeg" />
+		
+		<!-- Google Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@500;700;800&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
-		<title>PlateUp - Your perfect meal plan, simplified.</title>
 	</head>
 	<body>
 		<slot />
