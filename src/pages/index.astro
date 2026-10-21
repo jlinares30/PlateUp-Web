@@ -5,88 +5,94 @@ const coreFeatures = [
 	{
 		title: "Intuitive Weekly Planner",
 		tag: "Smart Scheduling",
-		description: "Effortlessly map out breakfasts, lunches, dinners, and snacks in minutes. Eliminate decision fatigue once and for all.",
+		description:
+			"Effortlessly map out breakfasts, lunches, dinners, and snacks in minutes. Eliminate decision fatigue once and for all.",
 		icon: "calendar",
 		badgeColor: "rgba(16, 185, 129, 0.15)",
-		textColor: "#34d399"
+		textColor: "#34d399",
 	},
 	{
-		title: "Curated Recipe Vault",
-		tag: "Flavor & Health",
-		description: "Browse high-protein, balanced, and quick culinary creations with detailed macros, prep instructions, and ingredient guides.",
+		title: "Smart Ingredient Match & % Ranking",
+		tag: "Zero Waste Tech",
+		description:
+			"Select ingredients in your kitchen and PlateUp ranks recipes by completion percentage, showing you exactly what you can cook right now.",
+		icon: "filter",
+		badgeColor: "rgba(16, 185, 129, 0.18)",
+		textColor: "#34d399",
+	},
+	{
+		title: "Recipe Vault & Custom Studio",
+		tag: "Flavor & Cloud Sync",
+		description:
+			"Explore curated balanced recipes, or upload your own creations with custom photos, macro calculations, and step-by-step guides.",
 		icon: "chef",
 		badgeColor: "rgba(245, 158, 11, 0.15)",
-		textColor: "#fbbf24"
+		textColor: "#fbbf24",
 	},
 	{
 		title: "Automated Grocery List",
-		tag: "Zero Waste",
-		description: "Instantly transform your weekly meals into an organized shopping checklist categorized by aisle to breeze through the supermarket.",
+		tag: "Aisle-Organized",
+		description:
+			"Instantly compile your weekly meals into an organized shopping checklist with 1-tap check-ins directly into your pantry.",
 		icon: "cart",
 		badgeColor: "rgba(139, 92, 246, 0.15)",
-		textColor: "#a78bfa"
+		textColor: "#a78bfa",
 	},
 	{
-		title: "Pantry & Ingredient Tracker",
+		title: "Pantry & Waste Reduction",
 		tag: "Save Money",
-		description: "Know exactly what's inside your kitchen before shopping. Cook with what you already have and reduce household food waste.",
+		description:
+			"Track pantry stocks so you never buy duplicates. Cook with ingredients you already have before they expire.",
 		icon: "fridge",
 		badgeColor: "rgba(59, 130, 246, 0.15)",
-		textColor: "#60a5fa"
-	},
-	{
-		title: "Custom Recipe Creator",
-		tag: "Cloudinary Sync",
-		description: "Upload your personal culinary secrets, snap photos with your phone camera, and customize prep instructions anytime.",
-		icon: "sparkles",
-		badgeColor: "rgba(236, 72, 153, 0.15)",
-		textColor: "#f472b6"
+		textColor: "#60a5fa",
 	},
 	{
 		title: "100% Offline Accessible",
 		tag: "Fast & Reliable",
-		description: "Access your meal plan and grocery checklist anywhere, even with zero network connection while navigating grocery aisles.",
+		description:
+			"Access your meal plan and grocery checklist anywhere, even with zero network connection while inside grocery aisles.",
 		icon: "lightning",
 		badgeColor: "rgba(20, 184, 166, 0.15)",
-		textColor: "#2dd4bf"
-	}
+		textColor: "#2dd4bf",
+	},
 ];
 
 const steps = [
 	{
 		number: "01",
 		title: "Plan Your Week in Minutes",
-		desc: "Select meals that match your dietary goals and lifestyle preferences with intuitive drag-and-drop calendars."
+		desc: "Select meals that match your dietary goals and lifestyle preferences with intuitive drag-and-drop calendars.",
 	},
 	{
 		number: "02",
 		title: "Generate Smart Shopping Lists",
-		desc: "PlateUp bundles ingredients automatically, checking off items you already have stored in your home pantry."
+		desc: "PlateUp bundles ingredients automatically, checking off items you already have stored in your home pantry.",
 	},
 	{
 		number: "03",
 		title: "Cook Stress-Free & Eat Better",
-		desc: "Follow crystal-clear, step-by-step instructions and enjoy wholesome nutrition without dinner dilemmas."
-	}
+		desc: "Follow crystal-clear, step-by-step instructions and enjoy wholesome nutrition without dinner dilemmas.",
+	},
 ];
 
 const faqs = [
 	{
 		q: "Is PlateUp free to use?",
-		a: "Yes! The Android release is completely free to download and use for your daily meal planning, recipe catalog, and grocery shopping."
+		a: "Yes! The Android release is completely free to download and use for your daily meal planning, recipe catalog, and grocery shopping.",
 	},
 	{
 		q: "Can I add my own custom recipes?",
-		a: "Absolutely. PlateUp includes a full recipe creation studio allowing you to add ingredients, instructions, cooking times, and photos."
+		a: "Absolutely. PlateUp includes a full recipe creation studio allowing you to add ingredients, instructions, cooking times, and photos.",
 	},
 	{
 		q: "How does the shopping list integrate with my meal plan?",
-		a: "Whenever you schedule meals for the week, PlateUp compiles all necessary ingredients into a categorized grocery checklist with a single tap."
+		a: "Whenever you schedule meals for the week, PlateUp compiles all necessary ingredients into a categorized grocery checklist with a single tap.",
 	},
 	{
 		q: "How do I install the Android APK?",
-		a: "Simply download the APK file via our download button, open the file on your Android device, and tap 'Install' (ensure your device permits installs from your browser or files app)."
-	}
+		a: "Simply download the APK file via our download button, open the file on your Android device, and tap 'Install' (ensure your device permits installs from your browser or files app).",
+	},
 ];
 ---
 
@@ -96,20 +102,37 @@ const faqs = [
 		<div class="container nav-container">
 			<a href="#" class="brand">
 				<img src="/logo.png" alt="PlateUp Logo" class="brand-logo" />
-				<span class="brand-text">Plate<span class="brand-accent">Up</span></span>
+				<span class="brand-text"
+					>Plate<span class="brand-accent">Up</span></span
+				>
 			</a>
-			
+
 			<nav class="nav-links">
 				<a href="#features">Features</a>
 				<a href="#preview">App Showcase</a>
 				<a href="#how-it-works">How It Works</a>
+				<a href="#roadmap">Coming Soon</a>
 				<a href="#faq">FAQ</a>
 			</nav>
 
 			<div class="nav-cta">
-				<a href="/app-release.apk" class="btn btn-primary btn-sm" download>
-					<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-						<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+				<a
+					href="/app-release.apk"
+					class="btn btn-primary btn-sm"
+					download
+				>
+					<svg
+						width="18"
+						height="18"
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2.2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+						></path>
 						<polyline points="7 10 12 15 17 10"></polyline>
 						<line x1="12" y1="15" x2="12" y2="3"></line>
 					</svg>
@@ -124,12 +147,12 @@ const faqs = [
 		<section class="hero-section">
 			<div class="hero-ambient-glow glow-1"></div>
 			<div class="hero-ambient-glow glow-2"></div>
-			
+
 			<div class="container hero-container">
 				<div class="hero-content">
 					<div class="badge">
 						<span class="badge-dot"></span>
-						<span>Version 1.0 Mobile APK Ready</span>
+						<span>v1.0 • In Active Development & Continuous Improvements</span>
 					</div>
 
 					<h1 class="hero-title">
@@ -138,24 +161,36 @@ const faqs = [
 					</h1>
 
 					<p class="hero-description">
-						Transform the way you nourish yourself. PlateUp brings together intuitive weekly meal scheduling, delicious balanced recipes, and intelligent grocery checklists into one sleek mobile experience.
+						Transform the way you nourish yourself. PlateUp brings
+						together intuitive weekly meal scheduling, delicious
+						balanced recipes, and intelligent grocery checklists
+						into one sleek mobile experience.
 					</p>
 
 					<div class="hero-actions">
-						<a href="/app-release.apk" class="btn btn-primary btn-lg" download id="download-hero-btn">
-							<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-								<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+						<a
+							href="/app-release.apk"
+							class="btn btn-primary btn-lg"
+							download
+							id="download-hero-btn"
+						>
+							<svg
+								width="22"
+								height="22"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2.3"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							>
+								<path
+									d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+								></path>
 								<polyline points="7 10 12 15 17 10"></polyline>
 								<line x1="12" y1="15" x2="12" y2="3"></line>
 							</svg>
 							<span>Download Android APK</span>
-						</a>
-
-						<a href="#preview" class="btn btn-secondary btn-lg">
-							<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-								<polygon points="5 3 19 12 5 21 5 3"></polygon>
-							</svg>
-							<span>Explore App</span>
 						</a>
 					</div>
 
@@ -186,14 +221,28 @@ const faqs = [
 							<div class="speaker-grill"></div>
 						</div>
 						<div class="phone-screen">
-							<img src="/preview-app.jpeg" alt="PlateUp Mobile Interface preview" class="app-screenshot" />
-							
+							<div class="live-pill-tag">
+								<span class="live-dot"></span>
+								<span>LIVE DEMO</span>
+							</div>
+							<img
+								src="/plateup-demo.gif"
+								alt="PlateUp Mobile App In Action - Live Demo"
+								class="app-screenshot"
+								loading="lazy"
+							/>
+						</div>
+
 							<!-- Floating floating badges on the mockups -->
 							<div class="floating-pill pill-top">
-								<span class="pill-icon">🥗</span>
+								<span class="pill-icon">⚡</span>
 								<div>
-									<div class="pill-title">Greek Quinoa Bowl</div>
-									<div class="pill-sub">420 kcal • 24g Protein</div>
+									<div class="pill-title">
+										92% Ingredient Match
+									</div>
+									<div class="pill-sub">
+										Ready to cook from your pantry
+									</div>
 								</div>
 							</div>
 
@@ -201,10 +250,11 @@ const faqs = [
 								<span class="pill-icon">🛒</span>
 								<div>
 									<div class="pill-title">Shopping List</div>
-									<div class="pill-sub">12 items auto-organized</div>
+									<div class="pill-sub">
+										12 items auto-organized
+									</div>
 								</div>
 							</div>
-						</div>
 					</div>
 				</div>
 			</div>
@@ -226,31 +276,45 @@ const faqs = [
 						<div class="day-col">
 							<span class="day-name">Monday</span>
 							<div class="meal-tag">🥑 Avocado Toast</div>
-							<div class="meal-tag active">🍗 Lemon Herb Chicken</div>
-							<div class="meal-tag">🫐 Protein Berry Smoothie</div>
+							<div class="meal-tag active">
+								🍗 Lemon Herb Chicken
+							</div>
+							<div class="meal-tag">
+								🫐 Protein Berry Smoothie
+							</div>
 						</div>
 						<div class="day-col">
 							<span class="day-name">Tuesday</span>
 							<div class="meal-tag">🥞 Oat Pancakes</div>
-							<div class="meal-tag active">🥗 Mediterranean Bowl</div>
+							<div class="meal-tag active">
+								🥗 Mediterranean Bowl
+							</div>
 							<div class="meal-tag">🥑 Roasted Veggie Wrap</div>
 						</div>
 						<div class="day-col">
 							<span class="day-name">Wednesday</span>
 							<div class="meal-tag">🍳 Spinach Omelet</div>
-							<div class="meal-tag active">🍣 Teriyaki Salmon Bowl</div>
+							<div class="meal-tag active">
+								🍣 Teriyaki Salmon Bowl
+							</div>
 							<div class="meal-tag">🥣 Greek Yogurt & Chia</div>
 						</div>
 						<div class="day-col">
 							<span class="day-name">Thursday</span>
 							<div class="meal-tag">🍓 Chia Pudding</div>
-							<div class="meal-tag active">🌮 Healthy Turkey Tacos</div>
+							<div class="meal-tag active">
+								🌮 Healthy Turkey Tacos
+							</div>
 							<div class="meal-tag">🍵 Green Detox Smoothie</div>
 						</div>
 						<div class="day-col">
 							<span class="day-name">Friday</span>
-							<div class="meal-tag">🥖 Sourdough & Poached Egg</div>
-							<div class="meal-tag active">🍲 Creamy Lentil Curry</div>
+							<div class="meal-tag">
+								🥖 Sourdough & Poached Egg
+							</div>
+							<div class="meal-tag active">
+								🍲 Creamy Lentil Curry
+							</div>
 							<div class="meal-tag">🍎 Apple Cinnamon Bowl</div>
 						</div>
 					</div>
@@ -264,61 +328,190 @@ const faqs = [
 				<div class="section-header">
 					<span class="badge">Engineered for Healthy Living</span>
 					<h2>Everything You Need in One Single Pocket Companion</h2>
-					<p>Crafted to remove the mental overhead of meal planning so you can focus on enjoying nutritious food every day.</p>
+					<p>
+						Crafted to remove the mental overhead of meal planning
+						so you can focus on enjoying nutritious food every day.
+					</p>
 				</div>
 
 				<div class="features-grid">
-					{coreFeatures.map((feat) => (
-						<div class="feature-card glass-card">
-							<div class="feat-top">
-								<div class="feature-icon-wrapper" style={`background: ${feat.badgeColor}; color: ${feat.textColor};`}>
-									{feat.icon === "calendar" && (
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-											<line x1="16" y1="2" x2="16" y2="6"></line>
-											<line x1="8" y1="2" x2="8" y2="6"></line>
-											<line x1="3" y1="10" x2="21" y2="10"></line>
-										</svg>
-									)}
-									{feat.icon === "chef" && (
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"></path>
-											<line x1="6" y1="17" x2="18" y2="17"></line>
-										</svg>
-									)}
-									{feat.icon === "cart" && (
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<circle cx="8" cy="21" r="1"></circle>
-											<circle cx="19" cy="21" r="1"></circle>
-											<path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path>
-										</svg>
-									)}
-									{feat.icon === "fridge" && (
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<rect x="5" y="2" width="14" height="20" rx="2"></rect>
-											<line x1="5" y1="10" x2="19" y2="10"></line>
-											<line x1="9" y1="6" x2="9" y2="7"></line>
-											<line x1="9" y1="14" x2="9" y2="16"></line>
-										</svg>
-									)}
-									{feat.icon === "sparkles" && (
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
-										</svg>
-									)}
-									{feat.icon === "lightning" && (
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-											<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
-										</svg>
-									)}
+					{
+						coreFeatures.map((feat) => (
+							<div class="feature-card glass-card">
+								<div class="feat-top">
+									<div
+										class="feature-icon-wrapper"
+										style={`background: ${feat.badgeColor}; color: ${feat.textColor};`}
+									>
+										{feat.icon === "calendar" && (
+											<svg
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<rect
+													x="3"
+													y="4"
+													width="18"
+													height="18"
+													rx="2"
+													ry="2"
+												/>
+												<line
+													x1="16"
+													y1="2"
+													x2="16"
+													y2="6"
+												/>
+												<line
+													x1="8"
+													y1="2"
+													x2="8"
+													y2="6"
+												/>
+												<line
+													x1="3"
+													y1="10"
+													x2="21"
+													y2="10"
+												/>
+											</svg>
+										)}
+										{feat.icon === "filter" && (
+											<svg
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" />
+											</svg>
+										)}
+										{feat.icon === "chef" && (
+											<svg
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z" />
+												<line
+													x1="6"
+													y1="17"
+													x2="18"
+													y2="17"
+												/>
+											</svg>
+										)}
+										{feat.icon === "cart" && (
+											<svg
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<circle cx="8" cy="21" r="1" />
+												<circle cx="19" cy="21" r="1" />
+												<path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12" />
+											</svg>
+										)}
+										{feat.icon === "fridge" && (
+											<svg
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<rect
+													x="5"
+													y="2"
+													width="14"
+													height="20"
+													rx="2"
+												/>
+												<line
+													x1="5"
+													y1="10"
+													x2="19"
+													y2="10"
+												/>
+												<line
+													x1="9"
+													y1="6"
+													x2="9"
+													y2="7"
+												/>
+												<line
+													x1="9"
+													y1="14"
+													x2="9"
+													y2="16"
+												/>
+											</svg>
+										)}
+										{feat.icon === "sparkles" && (
+											<svg
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z" />
+											</svg>
+										)}
+										{feat.icon === "lightning" && (
+											<svg
+												width="24"
+												height="24"
+												viewBox="0 0 24 24"
+												fill="none"
+												stroke="currentColor"
+												stroke-width="2"
+												stroke-linecap="round"
+												stroke-linejoin="round"
+											>
+												<polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+											</svg>
+										)}
+									</div>
+									<span
+										class="feat-tag"
+										style={`color: ${feat.textColor};`}
+									>
+										{feat.tag}
+									</span>
 								</div>
-								<span class="feat-tag" style={`color: ${feat.textColor};`}>{feat.tag}</span>
-							</div>
 
-							<h3 class="feat-card-title">{feat.title}</h3>
-							<p class="feat-card-desc">{feat.description}</p>
-						</div>
-					))}
+								<h3 class="feat-card-title">{feat.title}</h3>
+								<p class="feat-card-desc">{feat.description}</p>
+							</div>
+						))
+					}
 				</div>
 			</div>
 		</section>
@@ -329,17 +522,110 @@ const faqs = [
 				<div class="section-header">
 					<span class="badge">Seamless Journey</span>
 					<h2>Effortless In 3 Simple Steps</h2>
-					<p>How PlateUp turns your food routines from confusing chaos into calm confidence.</p>
+					<p>
+						How PlateUp turns your food routines from confusing
+						chaos into calm confidence.
+					</p>
 				</div>
 
 				<div class="steps-grid">
-					{steps.map((step) => (
-						<div class="step-card glass-card">
-							<span class="step-num">{step.number}</span>
-							<h3 class="step-title">{step.title}</h3>
-							<p class="step-desc">{step.desc}</p>
+					{
+						steps.map((step) => (
+							<div class="step-card glass-card">
+								<span class="step-num">{step.number}</span>
+								<h3 class="step-title">{step.title}</h3>
+								<p class="step-desc">{step.desc}</p>
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<!-- Coming Soon: Web Version & AI Assistant -->
+		<section class="roadmap-section" id="roadmap">
+			<div class="container">
+				<div class="section-header">
+					<span class="badge">
+						<span class="badge-dot"></span> Under Active Development
+					</span>
+					<h2>The Future of PlateUp: Web & AI Intelligence</h2>
+					<p>
+						We are expanding PlateUp beyond mobile with a powerful Web App and seamless AI assistants to make pantry tracking effortless.
+					</p>
+				</div>
+
+				<div class="roadmap-grid">
+					<!-- Card 1: Web App -->
+					<div class="roadmap-card glass-card">
+						<div class="roadmap-badge-row">
+							<span class="tech-tag web-tag">Web App</span>
+							<span class="status-pill">Coming Soon</span>
 						</div>
-					))}
+						<div class="roadmap-icon-box">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+								<line x1="8" y1="21" x2="16" y2="21"></line>
+								<line x1="12" y1="17" x2="12" y2="21"></line>
+							</svg>
+						</div>
+						<h3 class="roadmap-card-title">PlateUp for Web & Desktop</h3>
+						<p class="roadmap-card-desc">
+							Enjoy full planning convenience from your laptop or kitchen tablet. Real-time synchronization with your Android app, big-screen meal scheduling, and hands-free cooking guides.
+						</p>
+						<ul class="roadmap-bullets">
+							<li>🖥️ Cross-platform sync with mobile database</li>
+							<li>📖 Full-screen cooking mode for countertops</li>
+							<li>⚡ Ultra-fast performance with zero downloads</li>
+						</ul>
+					</div>
+
+					<!-- Card 2: AI Voice Pantry -->
+					<div class="roadmap-card glass-card highlight-card">
+						<div class="roadmap-badge-row">
+							<span class="tech-tag ai-tag">Multimodal AI</span>
+							<span class="status-pill active-pill">In Development</span>
+						</div>
+						<div class="roadmap-icon-box ai-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
+								<path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+								<line x1="12" y1="19" x2="12" y2="23"></line>
+								<line x1="8" y1="23" x2="16" y2="23"></line>
+							</svg>
+						</div>
+						<h3 class="roadmap-card-title">Voice Dump: 5-Second Pantry Logging</h3>
+						<p class="roadmap-card-desc">
+							Bought groceries at the local market with no receipt? Hold the mic and speak naturally. PlateUp extracts all items and quantities into your pantry automatically.
+						</p>
+						<div class="example-quote">
+							<em>"Compré dos kilos de pechuga, medio kilo de tomates, plátanos y cilantro."</em>
+							<span class="quote-arrow">→ Instant Categorized Pantry</span>
+						</div>
+					</div>
+
+					<!-- Card 3: AI Haul Photo Vision -->
+					<div class="roadmap-card glass-card highlight-card">
+						<div class="roadmap-badge-row">
+							<span class="tech-tag vision-tag">Vision AI</span>
+							<span class="status-pill active-pill">In Development</span>
+						</div>
+						<div class="roadmap-icon-box vision-icon">
+							<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+								<circle cx="12" cy="13" r="4"></circle>
+							</svg>
+						</div>
+						<h3 class="roadmap-card-title">Countertop Haul Snap</h3>
+						<p class="roadmap-card-desc">
+							Place your market haul on the kitchen counter, snap one photo, and let AI vision detect your produce, fruits, and proteins with 1-tap confirmation.
+						</p>
+						<ul class="roadmap-bullets">
+							<li>📸 Detects loose vegetables, fruits, and packages</li>
+							<li>🥗 Instant recipe suggestions using what you just bought</li>
+							<li>♻️ Smart alerts before ingredients spoil</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -353,21 +639,43 @@ const faqs = [
 						<span class="badge">
 							<span class="badge-dot"></span> Direct Installation
 						</span>
-						<h2 class="banner-title">Ready to Take Control of Your Nutrition?</h2>
+						<h2 class="banner-title">
+							Ready to Take Control of Your Nutrition?
+						</h2>
 						<p class="banner-sub">
-							Download the latest PlateUp Android build today. No subscription fees, no locked paywalls. Just honest, delicious meal planning.
+							Download the latest PlateUp Android build today. No
+							subscription fees, no locked paywalls. Just honest,
+							delicious meal planning.
 						</p>
 
 						<div class="banner-actions">
-							<a href="/app-release.apk" class="btn btn-primary btn-lg" download>
-								<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-									<path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-									<polyline points="7 10 12 15 17 10"></polyline>
+							<a
+								href="/app-release.apk"
+								class="btn btn-primary btn-lg"
+								download
+							>
+								<svg
+									width="22"
+									height="22"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2.3"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+								>
+									<path
+										d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+									></path>
+									<polyline points="7 10 12 15 17 10"
+									></polyline>
 									<line x1="12" y1="15" x2="12" y2="3"></line>
 								</svg>
 								Download APK (v1.0)
 							</a>
-							<span class="apk-info">Android 8.0+ • ~91 MB • Safe & Verified</span>
+							<span class="apk-info"
+								>Android 8.0+ • ~91 MB • Frequently Updated & Safe</span
+							>
 						</div>
 					</div>
 				</div>
@@ -380,23 +688,38 @@ const faqs = [
 				<div class="section-header">
 					<span class="badge">Got Questions?</span>
 					<h2>Frequently Asked Questions</h2>
-					<p>Find answers to common questions regarding PlateUp and its mobile app features.</p>
+					<p>
+						Find answers to common questions regarding PlateUp and
+						its mobile app features.
+					</p>
 				</div>
 
 				<div class="faq-list">
-					{faqs.map((faq) => (
-						<details class="faq-item glass-card">
-							<summary class="faq-question">
-								<span>{faq.q}</span>
-								<svg class="faq-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-									<polyline points="6 9 12 15 18 9"></polyline>
-								</svg>
-							</summary>
-							<div class="faq-answer">
-								<p>{faq.a}</p>
-							</div>
-						</details>
-					))}
+					{
+						faqs.map((faq) => (
+							<details class="faq-item glass-card">
+								<summary class="faq-question">
+									<span>{faq.q}</span>
+									<svg
+										class="faq-arrow"
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<polyline points="6 9 12 15 18 9" />
+									</svg>
+								</summary>
+								<div class="faq-answer">
+									<p>{faq.a}</p>
+								</div>
+							</details>
+						))
+					}
 				</div>
 			</div>
 		</section>
@@ -407,11 +730,18 @@ const faqs = [
 		<div class="container footer-grid">
 			<div class="footer-brand-col">
 				<div class="brand">
-					<img src="/logo.png" alt="PlateUp Logo" class="brand-logo" />
-					<span class="brand-text">Plate<span class="brand-accent">Up</span></span>
+					<img
+						src="/logo.png"
+						alt="PlateUp Logo"
+						class="brand-logo"
+					/>
+					<span class="brand-text"
+						>Plate<span class="brand-accent">Up</span></span
+					>
 				</div>
 				<p class="footer-tagline">
-					Empowering mindful meal preparation and sustainable nutrition for everyday life.
+					Empowering mindful meal preparation and sustainable
+					nutrition for everyday life.
 				</p>
 			</div>
 
@@ -428,15 +758,26 @@ const faqs = [
 			<div class="footer-links-col">
 				<h4 class="footer-col-title">App & Source</h4>
 				<ul class="footer-list">
-					<li><a href="/app-release.apk" download>Download APK</a></li>
-					<li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
-					<li><a href="#">Privacy Policy</a></li>
+					<li>
+						<a href="/app-release.apk" download>Download APK</a>
+					</li>
+					<li>
+						<a
+							href="https://github.com/jlinares30/PlateUp-app-mobile"
+							target="_blank"
+							rel="noopener noreferrer">GitHub Repository</a
+						>
+					</li>
+					<li><a href="/privacy">Privacy Policy</a></li>
 				</ul>
 			</div>
 		</div>
 
 		<div class="container footer-bottom">
-			<p>&copy; {new Date().getFullYear()} PlateUp. Built with passion by Jorge Linares.</p>
+			<p>
+				&copy; {new Date().getFullYear()} PlateUp. Built with passion by Jorge
+				Linares.
+			</p>
 		</div>
 	</footer>
 </Layout>
@@ -624,7 +965,11 @@ const faqs = [
 		position: absolute;
 		width: 320px;
 		height: 520px;
-		background: radial-gradient(circle, rgba(16, 185, 129, 0.28) 0%, transparent 70%);
+		background: radial-gradient(
+			circle,
+			rgba(16, 185, 129, 0.28) 0%,
+			transparent 70%
+		);
 		filter: blur(40px);
 		z-index: 0;
 	}
@@ -638,7 +983,9 @@ const faqs = [
 		border-radius: 44px;
 		padding: 10px;
 		border: 5px solid #23272f;
-		box-shadow: 0 25px 60px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1);
+		box-shadow:
+			0 25px 60px -10px rgba(0, 0, 0, 0.8),
+			0 0 0 1px rgba(255, 255, 255, 0.1);
 		transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 	}
 
@@ -686,6 +1033,40 @@ const faqs = [
 		background: #15181e;
 	}
 
+	.live-pill-tag {
+		position: absolute;
+		top: 14px;
+		right: 14px;
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		background: rgba(9, 11, 14, 0.75);
+		border: 1px solid rgba(16, 185, 129, 0.4);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		padding: 3px 8px;
+		border-radius: 9999px;
+		font-size: 0.65rem;
+		font-weight: 700;
+		letter-spacing: 0.05em;
+		color: #34d399;
+		z-index: 5;
+	}
+
+	.live-dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background-color: #10b981;
+		box-shadow: 0 0 8px #10b981;
+		animation: live-blink 1.5s infinite;
+	}
+
+	@keyframes live-blink {
+		0%, 100% { opacity: 1; transform: scale(1); }
+		50% { opacity: 0.3; transform: scale(0.8); }
+	}
+
 	.app-screenshot {
 		width: 100%;
 		height: 100%;
@@ -722,8 +1103,13 @@ const faqs = [
 	}
 
 	@keyframes float-pill {
-		0%, 100% { transform: translateY(0); }
-		50% { transform: translateY(-8px); }
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-8px);
+		}
 	}
 
 	.pill-icon {
@@ -748,7 +1134,11 @@ const faqs = [
 
 	.planner-box {
 		padding: 2.2rem;
-		background: linear-gradient(180deg, rgba(22, 27, 34, 0.85) 0%, rgba(13, 16, 21, 0.9) 100%);
+		background: linear-gradient(
+			180deg,
+			rgba(22, 27, 34, 0.85) 0%,
+			rgba(13, 16, 21, 0.9) 100%
+		);
 	}
 
 	.planner-header {
@@ -825,7 +1215,11 @@ const faqs = [
 	/* Features Section */
 	.features-section {
 		padding: var(--spacing-section) 0;
-		background: linear-gradient(180deg, transparent 0%, rgba(17, 20, 26, 0.5) 100%);
+		background: linear-gradient(
+			180deg,
+			transparent 0%,
+			rgba(17, 20, 26, 0.5) 100%
+		);
 	}
 
 	.features-grid {
@@ -913,6 +1307,150 @@ const faqs = [
 		line-height: 1.6;
 	}
 
+	/* Roadmap / Coming Soon Section */
+	.roadmap-section {
+		padding: var(--spacing-section) 0;
+		background: radial-gradient(circle at 50% 30%, rgba(139, 92, 246, 0.08) 0%, transparent 70%);
+	}
+
+	.roadmap-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+		gap: 2rem;
+	}
+
+	.roadmap-card {
+		padding: 2.4rem 2rem;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+	}
+
+	.highlight-card {
+		border-color: rgba(139, 92, 246, 0.25);
+		background: linear-gradient(180deg, rgba(22, 27, 34, 0.8) 0%, rgba(17, 20, 26, 0.9) 100%);
+	}
+
+	.highlight-card:hover {
+		border-color: rgba(139, 92, 246, 0.5);
+		box-shadow: 0 15px 35px rgba(139, 92, 246, 0.15);
+	}
+
+	.roadmap-badge-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 1.5rem;
+	}
+
+	.tech-tag {
+		font-size: 0.75rem;
+		font-weight: 700;
+		padding: 0.25rem 0.65rem;
+		border-radius: var(--radius-sm);
+		text-transform: uppercase;
+		letter-spacing: 0.05em;
+	}
+
+	.web-tag {
+		background: rgba(59, 130, 246, 0.15);
+		color: #60a5fa;
+		border: 1px solid rgba(59, 130, 246, 0.3);
+	}
+
+	.ai-tag {
+		background: rgba(139, 92, 246, 0.15);
+		color: #c084fc;
+		border: 1px solid rgba(139, 92, 246, 0.3);
+	}
+
+	.vision-tag {
+		background: rgba(245, 158, 11, 0.15);
+		color: #fbbf24;
+		border: 1px solid rgba(245, 158, 11, 0.3);
+	}
+
+	.status-pill {
+		font-size: 0.75rem;
+		color: var(--color-text-dim);
+		background: rgba(255, 255, 255, 0.05);
+		padding: 0.25rem 0.6rem;
+		border-radius: 9999px;
+		font-weight: 600;
+	}
+
+	.active-pill {
+		color: #34d399;
+		background: rgba(16, 185, 129, 0.12);
+		border: 1px solid rgba(16, 185, 129, 0.25);
+	}
+
+	.roadmap-icon-box {
+		width: 52px;
+		height: 52px;
+		border-radius: 14px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: rgba(59, 130, 246, 0.15);
+		color: #60a5fa;
+		margin-bottom: 1.25rem;
+	}
+
+	.ai-icon {
+		background: rgba(139, 92, 246, 0.15);
+		color: #c084fc;
+	}
+
+	.vision-icon {
+		background: rgba(245, 158, 11, 0.15);
+		color: #fbbf24;
+	}
+
+	.roadmap-card-title {
+		font-size: 1.3rem;
+		font-weight: 700;
+		margin-bottom: 0.85rem;
+	}
+
+	.roadmap-card-desc {
+		font-size: 0.95rem;
+		color: var(--color-text-muted);
+		line-height: 1.6;
+		margin-bottom: 1.4rem;
+	}
+
+	.roadmap-bullets {
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		gap: 0.65rem;
+		font-size: 0.9rem;
+		color: var(--color-text-muted);
+	}
+
+	.example-quote {
+		margin-top: auto;
+		padding: 1rem;
+		border-radius: var(--radius-sm);
+		background: rgba(0, 0, 0, 0.3);
+		border-left: 3px solid #c084fc;
+		display: flex;
+		flex-direction: column;
+		gap: 0.4rem;
+	}
+
+	.example-quote em {
+		font-size: 0.88rem;
+		color: #e2e8f0;
+	}
+
+	.quote-arrow {
+		font-size: 0.78rem;
+		font-weight: 700;
+		color: #34d399;
+	}
+
 	/* Download CTA Banner */
 	.download-banner-section {
 		padding: 3rem 0;
@@ -924,7 +1462,11 @@ const faqs = [
 		text-align: center;
 		overflow: hidden;
 		border: 1px solid rgba(16, 185, 129, 0.3);
-		background: radial-gradient(circle at center, rgba(16, 185, 129, 0.08) 0%, rgba(17, 20, 26, 0.95) 100%);
+		background: radial-gradient(
+			circle at center,
+			rgba(16, 185, 129, 0.08) 0%,
+			rgba(17, 20, 26, 0.95) 100%
+		);
 	}
 
 	.banner-glow {
