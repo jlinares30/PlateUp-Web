@@ -1,0 +1,85 @@
+---
+interface Props {
+	currentLang: 'en' | 'es';
+	currentPath?: string;
+}
+
+const { currentLang, currentPath = '' } = Astro.props;
+
+// Computes the alternate target link preserving the path
+function getLangUrl(targetLang: 'en' | 'es') {
+	// Strip existing /es prefix if present
+	let cleanPath = currentPath;
+	if (cleanPath.startsWith('/es')) {
+		cleanPath = cleanPath.slice(3);
+	}
+	if (!cleanPath.startsWith('/')) {
+		cleanPath = '/' + cleanPath;
+	}
+
+	if (targetLang === 'en') {
+		return cleanPath;
+	} else {
+		return cleanPath === '/' ? '/es' : `/es${cleanPath}`;
+	}
+}
+
+const enUrl = getLangUrl('en');
+const esUrl = getLangUrl('es');
+---
+
+<div class="lang-selector">
+	<a
+		href={enUrl}
+		class={`lang-btn ${currentLang === 'en' ? 'active' : ''}`}
+		aria-label="Switch to English"
+		title="English"
+	>
+		EN
+	</a>
+	<span class="lang-divider">/</span>
+	<a
+		href={esUrl}
+		class={`lang-btn ${currentLang === 'es' ? 'active' : ''}`}
+		aria-label="Cambiar a Español"
+		title="Español"
+	>
+		ES
+	</a>
+</div>
+
+<style>
+	.lang-selector {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.25rem;
+		padding: 0.25rem 0.6rem;
+		background: rgba(255, 255, 255, 0.05);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: var(--radius-full);
+		font-size: 0.78rem;
+		font-weight: 700;
+		letter-spacing: 0.04em;
+	}
+
+	.lang-btn {
+		color: var(--color-text-dim);
+		padding: 0.15rem 0.35rem;
+		border-radius: 4px;
+		transition: all 0.2s ease;
+	}
+
+	.lang-btn:hover {
+		color: var(--color-text-main);
+	}
+
+	.lang-btn.active {
+		color: var(--color-primary-light);
+		background: rgba(16, 185, 129, 0.15);
+	}
+
+	.lang-divider {
+		color: rgba(255, 255, 255, 0.2);
+		font-size: 0.7rem;
+	}
+</style>
